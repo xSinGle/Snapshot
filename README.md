@@ -18,23 +18,23 @@ curl -X POST -d "USER=employee_code&PATH=hdfs://nameservice/directory" http://12
 **Success Return:**
 
 ```json
-{msg: "Create Snapshot Successfully.",
-code: 200,
-user: "employee_code",
-path: "path needs to create snapshot",
-snapshot_name: "snapshot name set up by user, auto created if None is specified.| auto created with the snapshot name specified",
-action: "CREATE"}
+{"msg": "Create Snapshot Successfully.",
+"code": 200,
+"user": "employee_code",
+"path": "path needs to create snapshot",
+"snapshot_name": "snapshot name set up by user, auto created if None is specified.| auto created with the snapshot name specified",
+"action": "CREATE"}
 ```
 
 **Failure Return**
 
 ```json
-{msg: "Failed to create snapshot, total snapshot count might be over 7.",
-code: 403,
-user: "employee_code",
-path: "path needs to create snapshot",
-snapshot_name: "snapshot name set up by user, auto created if None is specified.| auto created with the snapshot name specified",
-action: "CREATE"}
+{"msg": "Failed to create snapshot, total snapshot count might be over 7.",
+"code": 403,
+"user": "employee_code",
+"path": "path needs to create snapshot",
+"snapshot_name": "snapshot name set up by user, auto created if None is specified.| auto created with the snapshot name specified",
+"action": "CREATE"}
 ```
 
 ## DELETE
@@ -54,23 +54,23 @@ curl -X POST -d "USER=employee_code&PATH=hdfs://nameservice/directory&SNAPSHOTNA
 **Success Return:**
 
 ```json
-{msg: "Delete Snapshot Successfully.",
-code: 200,
-user: "employee_code",
-path: "path needs to delete snapshot",
-snapshot_name: "snapshot name has to be specified.",
-action: "DELETE"}
+{"msg": "Delete Snapshot Successfully.",
+"code": 200,
+"user": "employee_code",
+"path": "path needs to delete snapshot",
+"snapshot_name": "snapshot name has to be specified.",
+"action": "DELETE"}
 ```
 
 **Failure Return**
 
 ```json
-{msg: "Failed to delete snapshot, snapshot might not existed.",
-code: 403,
-user: "employee_code",
-path: "path needs to delete snapshot",
-snapshot_name: "snapshot name has to be specified.",
-action: "DELETE"}
+{"msg": "Failed to delete snapshot, snapshot might not existed.",
+"code": 403,
+"user": "employee_code",
+"path": "path needs to delete snapshot",
+"snapshot_name": "snapshot name has to be specified.",
+"action": "DELETE"}
 ```
 
 ## RENAME
@@ -92,25 +92,25 @@ curl -X POST -d "USER=employee_code&PATH=hdfs://nameservice/directory&OLDSNAPSHO
 **Success Return:**
 
 ```json
-{msg: "Delete Snapshot Successfully.",
-code: 200,
-user: "employee_code",
-path: "path needs to rename snapshot",
-old_snapshot_name: "old_snapshot_name",
-snapshot_name: "new_snapshot_name",
-action: "RENAME"}
+{"msg": "Delete Snapshot Successfully.",
+"code": 200,
+"user": "employee_code",
+"path": "path needs to rename snapshot",
+"old_snapshot_name": "old_snapshot_name",
+"snapshot_name": "new_snapshot_name",
+"action": "RENAME"}
 ```
 
 **Failure Return**
 
 ```json
-{msg: "Failed to rename snapshot.",
-code: 403,
-user: "employee_code",
-path: "path needs to rename snapshot",
-old_snapshot_name: "old_snapshot_name",
-snapshot_name: "new_snapshot_name",
-action: "RENAME"}
+{"msg": "Failed to rename snapshot.",
+"code": 403,
+"user": "employee_code",
+"path": "path needs to rename snapshot",
+"old_snapshot_name": "old_snapshot_name",
+"snapshot_name": "new_snapshot_name",
+"action": "RENAME"}
 ```
 
 ## RECOVER
@@ -130,25 +130,25 @@ curl -X POST -d "USER=employee_code&PATH=hdfs://nameservice/directory&SNAPSHOTNA
 **Success Return:**
 
 ```json
-{msg: "Recover Snapshot Successfully.",
-code: 200,
-user: "employee_code",
-path: "file/directory would be recovered to this path.",
-snapshot_name: "recover_from_this_snapshot",
-filename: "filename needs to be recovered, system would recovered all files under snapshot dir if no filename is specified.",
-action: "RECOVER"}
+{"msg": "Recover Snapshot Successfully.",
+"code": 200,
+"user": "employee_code",
+"path": "file/directory would be recovered to this path.",
+"snapshot_name": "recover_from_this_snapshot",
+"filename": "filename needs to be recovered, system would recovered all files under snapshot dir if no filename is specified.",
+"action": "RECOVER"}
 ```
 
 **Failure Return**
 
 ```json
-{msg: "Failed to restore snapshot!",
-code: 403,
-user: "employee_code",
-path: "file/directory would be recovered to this path.",
-snapshot_name: "recover_from_this_snapshot",
-filename: "filename needs to be recovered, system would recovered all files under snapshot dir if no filename is specified.",
-action: "RECOVER"}
+{"msg": "Failed to restore snapshot!",
+"code": 403,
+"user": "employee_code",
+"path": "file/directory would be recovered to this path.",
+"snapshot_name": "recover_from_this_snapshot",
+"filename": "filename needs to be recovered, system would recovered all files under snapshot dir if no filename is specified.",
+"action": "RECOVER"}
 ```
 
 ## DISPLAY
@@ -168,12 +168,12 @@ curl -X POST -d "USER=employee_code&page_size=25&page_index=1" http://127.0.0.1:
 **Return:**
 
 ```json
-{msg: "Dispaly Snapshot of user [{用户工号}] Successfully",
-code: 200,
-user: "employee_code",
-page_index: "page index",
-page_size: "page size",
-action: "RECOVER"}
+{"msg": "Dispaly Snapshot of user [{用户工号}] Successfully",
+"code": 200,
+"user": "employee_code",
+"page_index": "page index",
+"page_size": "page size",
+"action": "RECOVER"}
 ```
 
 ## DIFFER
@@ -193,10 +193,10 @@ curl -X POST -d "USER=employee_code&PATH=hdfs://nameservice/directory&OLDSNAPSHO
 **Return:**
 
 ```json
-{msg: "Show Difference between Snapshot Successfully.",
-code: 200,
-user: "employee_code",
-old_snapshot_name: "current snapshot name",
-snapshot_name: "another snapshot name",
-action: "DIFFER"}
+{"msg": "Show Difference between Snapshot Successfully.",
+"code": 200,
+"user": "employee_code",
+"old_snapshot_name": "current snapshot name",
+"snapshot_name": "another snapshot name",
+"action": "DIFFER"}
 ```
